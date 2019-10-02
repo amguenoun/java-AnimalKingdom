@@ -44,5 +44,9 @@ public class Main {
         System.out.println("\n***Animals By Alphabetically***");
         myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         myList.forEach(animal -> System.out.println(animal));
+
+        System.out.println("\n***Animals By Movement***");
+        myList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+        myList.forEach(animal -> System.out.println(animal.getName() + " " + animal.move()));
     }
 }

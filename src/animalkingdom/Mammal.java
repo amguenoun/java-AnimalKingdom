@@ -8,7 +8,7 @@ public class Mammal extends Animal {
 
     @Override
     public String move() {
-        return name + " moves by walking";
+        return "walks";
     }
 
     @Override
