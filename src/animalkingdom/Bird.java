@@ -13,11 +13,11 @@ public class Bird extends Animal {
 
     @Override
     public String breathe() {
-        return name + " breathes through lungs";
+        return "lungs";
     }
 
     @Override
     public String reproduce() {
-        return name + " reproduces through eggs";
+        return "eggs";
     }
 }

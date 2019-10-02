@@ -13,11 +13,11 @@ public class Fish extends Animal {
 
     @Override
     public String breathe() {
-        return name + " breathes through gills";
+        return "gills";
     }
 
     @Override
     public String reproduce() {
-        return name + " reproduces through eggs";
+        return "eggs";
     }
 }

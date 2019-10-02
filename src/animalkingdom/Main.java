@@ -48,5 +48,25 @@ public class Main {
         System.out.println("\n***Animals By Movement***");
         myList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         myList.forEach(animal -> System.out.println(animal.getName() + " " + animal.move()));
+
+        System.out.println("\n***Animals That Breathe With Lungs ***");
+        filter(myList, animal -> animal.breathe().equalsIgnoreCase("lungs"));
+        filteredList.forEach(animal -> System.out.println(animal.getName() + " uses " + animal.breathe()));
+
+        System.out.println("\n***Animals That Breathe With Lungs and Were Named in 1758 ***");
+        filter(myList, animal -> animal.breathe().equalsIgnoreCase("lungs") && animal.getYear() == 1758);
+        filteredList.forEach(animal -> System.out
+                .println(animal.getName() + " uses " + animal.breathe() + " and was named in " + animal.getYear()));
+
+        System.out.println("\n***Animals That Breathe With Lungs and Lay Eggs ***");
+        filter(myList,
+                animal -> animal.breathe().equalsIgnoreCase("lungs") && animal.reproduce().equalsIgnoreCase("eggs"));
+        filteredList.forEach(animal -> System.out
+                .println(animal.getName() + " uses " + animal.breathe() + " and reproduces by " + animal.reproduce()));
+
+        System.out.println("\n***Animals That Were Named in 1758 Sorted Alphabetically ***");
+        filter(myList, animal -> animal.getYear() == 1758);
+        filteredList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        filteredList.forEach(animal -> System.out.println(animal.getName() + " was named in " + animal.getYear()));
     }
 }
