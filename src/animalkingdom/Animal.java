@@ -1,10 +1,10 @@
 package animalkingdom;
 
 public abstract class Animal {
-    private static int maxId = 0;
-    private int id;
-    private String name;
-    private int year;
+    static int maxId = 0;
+    int id;
+    String name;
+    int year;
 
     public Animal(String name, int year) {
         maxId++;
