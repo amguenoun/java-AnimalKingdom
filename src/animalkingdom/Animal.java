@@ -37,6 +37,11 @@ public abstract class Animal {
         return name + " eats.";
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + name + " Year Named: " + year;
+    }
+
     public abstract String move();
 
     public abstract String breathe();
